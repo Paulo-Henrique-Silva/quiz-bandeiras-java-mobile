@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerguntaActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/colorOnPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorOnPrimary"
+            android:orientation="vertical"
+            android:paddingStart="48dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="48dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/lblContador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="21dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="center"
+                android:text="0/10"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="24sp" />
+
+            <ProgressBar
+                android:id="@+id/pbrProgresso"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginBottom="34dp"
+                android:max="10"
+                android:progress="0"
+                android:scaleY="3" />
+
+            <ImageView
+                android:id="@+id/imgBandeira"
+                android:layout_width="match_parent"
+                android:layout_height="188dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="34dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/quiz_logo"
+                tools:srcCompat="@drawable/quiz_logo" />
+
+            <RadioGroup
+                android:id="@+id/rgpAlternativas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rbtAlternativa1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/open_sans"
+                    android:onClick="ativarBotao"
+                    android:text="pais1"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/rbtAlternativa2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/open_sans"
+                    android:onClick="ativarBotao"
+                    android:text="pais2"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/rbtAlternativa3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/open_sans"
+                    android:onClick="ativarBotao"
+                    android:text="pais3"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/rbtAlternativa4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/open_sans"
+                    android:onClick="ativarBotao"
+                    android:text="pais4"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="24sp" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnAvancar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:enabled="false"
+                android:fontFamily="@font/open_sans_semibold"
+                android:onClick="avancar"
+                android:text="Avançar"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
