@@ -37,10 +37,13 @@ public class ResultadosActivity extends AppCompatActivity {
         intent.putExtra("nomeUsuario", nomeUsuario);
 
         startActivity(intent);
+        this.finish();
     }
 
     public void irATelaInicial(View view) {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+
         startActivity(intent);
+        this.finish();
     }
 }

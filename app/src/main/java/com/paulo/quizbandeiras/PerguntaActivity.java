@@ -119,6 +119,7 @@ public class PerguntaActivity extends AppCompatActivity {
             intent.putExtra("nomeUsuario", nomeUsuario);
 
             startActivity(intent);
+            this.finish();
         }
     }
 }
