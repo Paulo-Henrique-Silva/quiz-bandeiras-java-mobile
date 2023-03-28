@@ -41,9 +41,6 @@ public class ResultadosActivity extends AppCompatActivity {
     }
 
     public void irATelaInicial(View view) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-
-        startActivity(intent);
         this.finish();
     }
 }
